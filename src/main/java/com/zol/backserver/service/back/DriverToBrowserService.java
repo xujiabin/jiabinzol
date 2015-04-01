@@ -116,7 +116,7 @@ public class DriverToBrowserService {
 					nameEl.sendKeys(username);
 					WebElement passEl =web.findElement(By.id("loginPassword"));
 					passEl.sendKeys(password);
-					logger.info("====1");
+					logger.info("=========输入完毕进行登录======");
 					WebElement login =web.findElements(By.className("login-btn")).get(0);
 					login.click();
 					try {
@@ -126,14 +126,14 @@ public class DriverToBrowserService {
 					} catch (Exception e) {
 						logger.error("经销商没有弹出框提醒！",e);
 					}
-					logger.info("====2");
+					logger.info("====登录完毕进行一件刷新============");
 					WebElement refer =web.findElement(By.id("oneKeyRefreshPirce"));
 					refer.click();
 					WebElement sure =web.findElements(By.className("layerbox-button-true")).get(0);
 					sure.click();
 //					
 					web.quit();
-					
+					logger.info("====退出页面============");
 					int count = 0;
 					synchronized (this) {
 						count = cache.get("timerCount");

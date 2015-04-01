@@ -63,7 +63,7 @@ public class IndexController {
 	    @RequestMapping(value = "testLexin",method = RequestMethod.GET)
 	    public  String testLexin(){
 			try {
-				logger.info("====testLexin===1=");
+				logger.info("====进入测试驱动浏览器=");
 //				System.setProperty("webdriver.chrome.driver", "E:\\judian\\chromedriver.exe");
 //				WebDriver web =  new ChromeDriver();
 //				System.setProperty("webdriver.firefox.bin", "E:\\Mozilla\\Firefox\\firefox.exe");
@@ -72,10 +72,10 @@ public class IndexController {
 //						"com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
 				WebDriver web =  new FirefoxDriver();//firefox 19.0   selenium 2.31.0
 				
-				logger.info("====testLexin==3333==");
+				logger.info("====驱动加载完毕==");
 				
 				web.get("http://dealer.zol.com.cn/beijing/");
-				logger.info("====1");
+				logger.info("=====已经打开页面======");
 //				WebElement nameEl =web.findElement(By.id("loginUsername"));
 //				nameEl.sendKeys("pysc");
 //				logger.info("====2");
@@ -106,7 +106,7 @@ public class IndexController {
 //				sure.click();
 				/** 跳出frame,进入default content;*/
 //			    web.switchTo().defaultContent();
-				System.out.println("====4");
+				System.out.println("=====退出页面========");
 				
 				web.quit();
 				
