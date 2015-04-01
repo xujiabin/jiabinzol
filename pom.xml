@@ -68,6 +68,17 @@
        
     </pluginRepositories>
     <dependencies>
+    	<!-- mail -->
+    	<dependency>
+		  <groupId>javax.mail</groupId>
+		  <artifactId>javax.mail-api</artifactId>
+		  <version>1.5.2</version>
+		</dependency>
+		<dependency>
+		  <groupId>javax.mail</groupId>
+		  <artifactId>mail</artifactId>
+		  <version>1.5.0-b01</version>
+		</dependency>
         <!-- General dependencies for standard applications -->
         <dependency>
 			<groupId>junit</groupId>

@@ -26,9 +26,9 @@
        <property name="jobDetail">
            <ref bean="browsersMethodInvokingJobDetail" />
        </property>
-       <!-- 每小时1秒执行 -->
+       <!-- 每小时55分钟执行 -->
        <property name="cronExpression">
-           <value>1 0 9-22 * * ? </value>
+           <value>0 55 9-22 * * ? </value>
        </property>
     </bean>
     
